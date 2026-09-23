@@ -29,4 +29,4 @@ if st.button("Calcular Preço Estimado"):
         st.subheader(f"Valor Estimado: ${predicao[0] * 100000:.2f}")
     except Exception as e:
         st.error(f"Erro ao realizar a previsão: {e}")
-      
+        
