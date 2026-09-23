@@ -1,13 +1,13 @@
+
 import streamlit as st
 import pandas as pd
-import pickle
+import joblib
 
 st.title("Avaliação Imobiliária com IA")
 
-# Carregar o modelo treinado usando pickle nativo
+# Carregar o modelo treinado
 try:
-    with open('modelo_casas.pkl', 'rb') as f:
-        model = pickle.load(f)
+    model = joblib.load('modelo_casas.pkl')
     st.success("Modelo carregado com sucesso!")
 except Exception as e:
     st.error(f"Erro ao carregar o modelo: {e}")
